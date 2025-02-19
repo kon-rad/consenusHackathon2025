@@ -1,4 +1,5 @@
 version: "3"
+
 services:
   # frontend:
   #   build:
@@ -9,27 +10,25 @@ services:
   #     - app-network
   #   command: npm run dev
 
-  # backend:
-  #   build:
-  #     context: ./backend
-  #   ports:
-  #     - "5000:5000"
-  #   networks:
-  #     - app-network
-  #   depends_on:
-  #     - postgres
-
   postgres:
-    image: postgres:latest
+    image: postgres:17-alpine
+    container_name: postgres
+    restart: unless-stopped
     environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: hackathon
+      - POSTGRES_DB=hackathon
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
     ports:
       - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
     networks:
       - app-network
 
 networks:
   app-network:
     driver: bridge
+
+volumes:
+  postgres-data:
+    driver: local

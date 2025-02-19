@@ -14,10 +14,8 @@ async function bootstrap() {
     credentials: true,
   });
 
-  const defaultOptions = new DocumentBuilder().setTitle('OVPN API').build();
-  const defaultDocument = SwaggerModule.createDocument(app, defaultOptions, {
-    include: [],
-  });
+  const defaultOptions = new DocumentBuilder().setTitle('Hackathon API').build();
+  const defaultDocument = SwaggerModule.createDocument(app, defaultOptions);
   SwaggerModule.setup('api/doc', app, defaultDocument);
 
   await app.listen(process.env.PORT ?? 3000);

@@ -1,32 +1,26 @@
-# Stage 1: Build Stage
-FROM node:22-alpine AS build
-
-# Set working directory
+FROM node:23-alpine AS builder
+USER node
 WORKDIR /app
 
-# Install build dependencies
-RUN apk add --no-cache --virtual .build-deps gcc g++ make python3
+COPY package.json package-lock.json ./
 
-# Copy package.json and package-lock.json (or yarn.lock) to install dependencies
-COPY package*.json ./
+RUN --mount=type=cache,target=/home/node/.npm,id=npm_cache,uid=1000,gid=1000,sharing=locked \
+       npm ci --cache /home/node/.npm --prefer-offline --legacy-peer-deps
 
-# Install dependencies
-RUN npm install
+COPY --chown=node:node . .
+RUN set -x & ls -la
+RUN npm run build
 
-# Copy the rest of the application files
-COPY . .
 
-# Stage 2: Production Stage
 FROM node:22-alpine
-
-# Set working directory
+USER node
 WORKDIR /app
 
-# Copy only the necessary files from the build stage
-COPY --from=build /app /app
+COPY package.json package-lock.json ./
 
-# Expose the backend port
-EXPOSE 5000
+RUN --mount=type=cache,target=/home/node/.npm,id=npm_cache,uid=1000,gid=1000,sharing=locked \
+       npm ci --cache /home/node/.npm --prefer-offline --legacy-peer-deps --omit=dev
 
-# Run the Express.js app
-CMD ["npm", "start"]
+COPY --from=builder /app/dist ./dist
+CMD ["node", "dist/main.js"]
+

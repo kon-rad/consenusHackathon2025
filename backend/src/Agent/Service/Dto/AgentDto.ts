@@ -1,16 +1,23 @@
 import { Agent } from "@/Agent/Model/Agent";
+import { ApiProperty } from "@nestjs/swagger";
 
 export class AgentDto {
+  @ApiProperty()
   id: string;
 
+  @ApiProperty()
   name: string;
 
+  @ApiProperty()
   bio: string;
 
+  @ApiProperty()
   address: string;
 
+  @ApiProperty()
   imageUrl: string;
 
+  @ApiProperty()
   metadata: any;
 
   constructor(id: string, name: string, bio: string, address: string, imageUrl: string, metadata: any) {

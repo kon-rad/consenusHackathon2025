@@ -43,6 +43,7 @@ lerna-debug.log*
 # temp directory
 .temp
 .tmp
+coverage
 
 # Runtime data
 pids
