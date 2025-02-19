@@ -1,19 +1,29 @@
-# Dockerfile for Express.js backend
+# Stage 1: Build Stage
+FROM node:22-alpine AS build
 
-# Use official Node.js LTS image as the base image
-FROM node:16
-
-# Set the working directory
+# Set working directory
 WORKDIR /app
 
+# Install build dependencies
+RUN apk add --no-cache --virtual .build-deps gcc g++ make python3
+
 # Copy package.json and package-lock.json (or yarn.lock) to install dependencies
-COPY package*.json ./
+COPY package.json package-lock.json ./
 
 # Install dependencies
 RUN npm install
 
 # Copy the rest of the application files
 COPY . .
+
+# Stage 2: Production Stage
+FROM node:16-alpine
+
+# Set working directory
+WORKDIR /app
+
+# Copy only the necessary files from the build stage
+COPY --from=build /app /app
 
 # Expose the backend port
 EXPOSE 5000
