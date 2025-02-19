@@ -2,7 +2,7 @@ services:
   nginx:
     image: nginx:1.21.0-alpine
     volumes:
-      - ./conf.d:/etc/nginx/conf.d
+      - ./nginx/conf.d:/etc/nginx/conf.d
     ports:
       - 80:80
     restart: unless-stopped
