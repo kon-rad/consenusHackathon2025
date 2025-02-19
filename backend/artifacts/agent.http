@@ -1,0 +1,24 @@
+### Create agent
+
+POST {{apiUrl}}/api/agents
+Content-Type: application/json
+
+{
+  "name": "Alice",
+  "bio": "Alice is a great agent",
+  "imageUrl": "example.org/alice.jpg",
+  "metadata": {
+    "key1": "value1",
+    "key2": "value2"
+  }
+}
+
+### Get agents
+
+GET {{apiUrl}}/api/agents
+Content-Type: application/json
+
+### Get agent by id
+
+GET {{apiUrl}}/api/agents/{{agentId}}
+Content-Type: application/json
