@@ -17,7 +17,7 @@ RUN npm install
 COPY . .
 
 # Stage 2: Production Stage
-FROM node:16-alpine
+FROM node:22-alpine
 
 # Set working directory
 WORKDIR /app
