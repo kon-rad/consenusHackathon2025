@@ -10,13 +10,13 @@ export default function Page() {
       <nav className="border-b border-gray-800">
         <div className="flex items-center justify-between px-4 py-2">
           <div className="flex items-center space-x-8">
-            <Image
+            {/* <Image
               src=""
               alt="Logo"
               width={120}
               height={40}
               className="h-8 w-auto"
-            />
+            /> */}
             {/* <div className="hidden space-x-6 md:flex">
               <Button
                 variant="ghost"
@@ -151,16 +151,16 @@ export default function Page() {
 const agents = [
   {
     id: 1,
-    name: "Hyper-fy",
-    symbol: "HYPE",
-    hash: "D8Q3SL...D2virt",
-    category: "Entertainment",
-    avatar: "/placeholder.svg?height=48&width=48",
+    name: "MKTrader",
+    symbol: "MKTT",
+    hash: "0x2099...F037EA",
+    category: "AI Trader",
+    avatar: "/agentA.png?height=48&width=48",
     verified: true,
     marketCap: "5.97",
     tokenPrice: "0.000006",
     createdAt: "an hour ago",
-    creatorAvatar: "/placeholder.svg?height=24&width=24",
+    creatorAvatar: "/agentA.png?height=24&width=24",
     creatorHash: "AFPc...6KG",
   },
   {
@@ -168,13 +168,13 @@ const agents = [
     name: "aimon_agent",
     symbol: "AIMON",
     hash: "0x5559...d73e00",
-    category: "Productivity",
-    avatar: "/placeholder.svg?height=48&width=48",
+    category: "AI Trader",
+    avatar: "/agentB.png?height=48&width=48",
     verified: true,
     marketCap: "6.3",
     tokenPrice: "0.000006",
     createdAt: "2 hours ago",
-    creatorAvatar: "/placeholder.svg?height=24&width=24",
+    creatorAvatar: "/agentB.png?height=24&width=24",
     creatorHash: "0x82...331",
   },
   // Add more agents as needed...

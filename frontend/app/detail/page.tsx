@@ -49,15 +49,12 @@ export default function Page() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <Avatar className="h-12 w-12">
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-19%20at%205.50.12%E2%80%AFPM-yzYkxP0a7s67iqOYp8QHKeCc5aOtdj.png"
-                  alt="Claira"
-                />
+                <img src="/agentA.png" alt="MKTrader" />
               </Avatar>
               <div>
                 <h2 className="text-xl font-bold flex items-center gap-2">
-                  Claira
-                  <span className="text-sm text-gray-400">$CLAIRA</span>
+                  MKTrader
+                  <span className="text-sm text-gray-400">$MKTT</span>
                 </h2>
                 <div className="text-sm text-gray-400">
                   0x2099...F037EA • Information
@@ -103,9 +100,9 @@ export default function Page() {
               <div>
                 <h3 className="text-xl font-bold mb-2">Biography</h3>
                 <p className="text-gray-400">
-                  Meet Claira, your AI travel guide! $Claira is an AI-powered
-                  token designed to connect, incentivize, and enhance travel
-                  experiences across multiple platforms, including Web3
+                  Meet MKTrader, your AI travel guide! $MKTrader is an
+                  AI-powered token designed to connect, incentivize, and enhance
+                  travel experiences across multiple platforms, including Web3
                   communities, travel apps, and decentralized networks. It
                   creates a community-driv...
                 </p>
@@ -219,10 +216,7 @@ export default function Page() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <Avatar className="h-8 w-8">
-                  <img
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-19%20at%205.50.12%E2%80%AFPM-yzYkxP0a7s67iqOYp8QHKeCc5aOtdj.png"
-                    alt="Developer"
-                  />
+                  <img src="/agentA.png" alt="Developer" />
                 </Avatar>
                 <div>
                   <div className="flex items-center gap-2">
@@ -249,7 +243,7 @@ export default function Page() {
             <div className="mt-4">
               <h4 className="font-bold mb-2">Biography</h4>
               <p className="text-sm text-gray-400">
-                Obsessed with blockchain, ai, and gaming. Building Claira
+                Obsessed with blockchain, ai, and gaming. Building MKTrader
                 Travels.
               </p>
             </div>
