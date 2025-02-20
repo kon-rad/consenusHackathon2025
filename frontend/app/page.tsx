@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-[#0D1117] text-white">
+    <div className="min-h-screen bg-black text-white">
       {/* Top Navigation */}
       <nav className="border-b border-gray-800">
         <div className="flex items-center justify-between px-4 py-2">
@@ -17,7 +17,7 @@ export default function Page() {
               height={40}
               className="h-8 w-auto"
             />
-            <div className="hidden space-x-6 md:flex">
+            {/* <div className="hidden space-x-6 md:flex">
               <Button
                 variant="ghost"
                 className="text-gray-300 hover:text-white"
@@ -36,7 +36,7 @@ export default function Page() {
               >
                 Try G.A.M.E
               </Button>
-            </div>
+            </div> */}
           </div>
 
           <div className="flex flex-1 justify-center px-16">
@@ -44,7 +44,7 @@ export default function Page() {
               <Search className="absolute left-3 top-2.5 h-5 w-5 text-gray-500" />
               <Input
                 placeholder="Search"
-                className="w-full bg-gray-900 pl-10 text-white placeholder-gray-500 focus:ring-0"
+                className="w-full bg-black pl-10 text-white placeholder-gray-500 focus:ring-0"
               />
             </div>
           </div>
@@ -52,7 +52,7 @@ export default function Page() {
           <div className="flex items-center space-x-4">
             <Button
               variant="outline"
-              className="border-green-600 text-green-600"
+              className="bg-white/5 border-white/10 text-white"
             >
               Create New Agent
             </Button>

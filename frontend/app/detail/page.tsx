@@ -15,29 +15,30 @@ export default function Page() {
   const [activeTab, setActiveTab] = useState("summary");
 
   return (
-    <div className="min-h-screen bg-[#001a1a] bg-opacity-90 text-gray-200">
+    <div className="min-h-screen bg-black bg-opacity-90 text-gray-200">
       {/* Navigation */}
-      <nav className="flex items-center justify-between p-4 border-b border-gray-800">
-        <div className="flex items-center gap-6">
-          <h1 className="text-xl font-bold">Protocol</h1>
-          <div className="hidden md:flex gap-6">
-            <Button variant="ghost">Sentiment</Button>
-            <Button variant="ghost">Prototype</Button>
-            <Button variant="ghost">Try G.A.M.E</Button>
+      <nav className="border-b border-white/10 bg-black">
+        <div className="flex items-center justify-between px-4 py-3">
+          <div className="flex items-center space-x-6">
+            {/* <span className="text-white font-semibold">Logo</span> */}
+            <div className="space-x-4 text-sm text-white/80"></div>
           </div>
-        </div>
-
-        <div className="flex items-center gap-4">
-          <div className="relative">
-            <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-500" />
-            <Input
-              placeholder="Search"
-              className="w-[300px] pl-10 bg-gray-900/50 border-gray-700"
-            />
+          <div className="flex items-center space-x-4">
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/50" />
+              <Input
+                type="search"
+                placeholder="Search"
+                className="w-64 bg-white/5 border-white/10 pl-10 text-white placeholder:text-white/50"
+              />
+            </div>
+            <Button
+              variant="outline"
+              className="bg-white/5 border-white/10 text-white"
+            >
+              Create New Agent
+            </Button>
           </div>
-          <Button variant="outline" className="border-teal-500 text-teal-500">
-            Create New Agent
-          </Button>
         </div>
       </nav>
 
@@ -71,7 +72,7 @@ export default function Page() {
           </div>
 
           {/* Chart */}
-          <div className="h-[400px] bg-gray-900/30 rounded-lg p-4">
+          <div className="h-[400px] bg-black rounded-lg p-4">
             <Chart />
           </div>
 
@@ -137,7 +138,7 @@ export default function Page() {
                     <Button
                       key={action}
                       variant="outline"
-                      className="border-gray-700"
+                      className="bg-white/5 border-white/10 text-white placeholder:text-white/50"
                     >
                       {action}
                     </Button>
@@ -151,7 +152,7 @@ export default function Page() {
         {/* Sidebar */}
         <aside className="space-y-6">
           {/* Swap Card */}
-          <div className="bg-gray-900/30 rounded-lg p-4">
+          <div className="bg-black rounded-lg p-4">
             <h3 className="text-xl font-bold mb-4">Swap</h3>
             <Tabs defaultValue="buy" className="w-full">
               <TabsList className="grid grid-cols-2 mb-4">
@@ -164,13 +165,25 @@ export default function Page() {
                   <span>VIRTUAL</span>
                 </div>
                 <div className="grid grid-cols-3 gap-2">
-                  <Button variant="outline" size="sm">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="bg-white/5 border-white/10 text-white placeholder:text-white/50"
+                  >
                     10
                   </Button>
-                  <Button variant="outline" size="sm">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="bg-white/5 border-white/10 text-white placeholder:text-white/50"
+                  >
                     100
                   </Button>
-                  <Button variant="outline" size="sm">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="bg-white/5 border-white/10 text-white placeholder:text-white/50"
+                  >
                     1000
                   </Button>
                 </div>
@@ -180,7 +193,7 @@ export default function Page() {
           </div>
 
           {/* Token Data */}
-          <div className="bg-gray-900/30 rounded-lg p-4">
+          <div className="bg-black rounded-lg p-4">
             <h3 className="text-xl font-bold mb-4">Token Data</h3>
             <div className="space-y-4">
               <div>
@@ -201,7 +214,7 @@ export default function Page() {
           </div>
 
           {/* Developer */}
-          <div className="bg-gray-900/30 rounded-lg p-4">
+          <div className="bg-black rounded-lg p-4">
             <h3 className="text-xl font-bold mb-4">Developer</h3>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">

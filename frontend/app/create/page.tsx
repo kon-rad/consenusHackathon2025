@@ -24,17 +24,8 @@ export default function CreateAgent() {
       <nav className="border-b border-white/10 bg-black">
         <div className="flex items-center justify-between px-4 py-3">
           <div className="flex items-center space-x-6">
-            <span className="text-white font-semibold">Logo</span>
+            {/* <span className="text-white font-semibold">Logo</span> */}
             <div className="space-x-4 text-sm text-white/80">
-              <a href="#" className="hover:text-white">
-                Sentient
-              </a>
-              <a href="#" className="hover:text-white">
-                Prototype
-              </a>
-              <a href="#" className="hover:text-white">
-                Try G.A.M.E
-              </a>
             </div>
           </div>
           <div className="flex items-center space-x-4">
@@ -48,7 +39,7 @@ export default function CreateAgent() {
             </div>
             <Button
               variant="outline"
-              className="border-teal-500 text-teal-500 hover:bg-teal-500/10"
+              className="bg-white/5 border-white/10 text-white"
             >
               Create New Agent
             </Button>
@@ -58,38 +49,13 @@ export default function CreateAgent() {
 
       <div className="max-w-3xl mx-auto px-4 py-8">
         <h1 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
-          Create New Agent on Base
-          <span className="w-5 h-5 rounded-full bg-teal-500/20 flex items-center justify-center">
-            <div className="w-3 h-3 rounded-full bg-teal-500"></div>
+          Create New Agent
+          <span className="w-5 h-5 rounded-full bg-blue-500/20 flex items-center justify-center">
+            <div className="w-3 h-3 rounded-full bg-blue-500"></div>
           </span>
         </h1>
 
         <div className="space-y-6">
-          <RadioGroup value={platform} onValueChange={setPlatform}>
-            <div className="space-y-2">
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem
-                  value="base"
-                  id="base"
-                  className="border-white/50 text-teal-500"
-                />
-                <Label htmlFor="base" className="text-white">
-                  I want to launch an AI Agent on Base
-                </Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem
-                  value="solana"
-                  id="solana"
-                  className="border-white/50 text-teal-500"
-                />
-                <Label htmlFor="solana" className="text-white">
-                  I want to launch an AI Agent on Solana
-                </Label>
-              </div>
-            </div>
-          </RadioGroup>
-
           <RadioGroup value={tokenType} onValueChange={setTokenType}>
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
@@ -190,10 +156,13 @@ export default function CreateAgent() {
           </p>
 
           <div className="flex items-center gap-4">
-            <Button className="bg-teal-500 text-white hover:bg-teal-600">
+            <Button className="bg-white/5 border-white/10 text-white">
               Next
             </Button>
-            <Button variant="ghost" className="text-white hover:bg-white/10">
+            <Button
+              variant="ghost"
+              className="bg-white/5 border-white/10 text-white"
+            >
               Cancel
             </Button>
           </div>
