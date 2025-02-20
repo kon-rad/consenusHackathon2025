@@ -1,5 +1,18 @@
 # Consenus Hackathon 2025
 
+### Video Demo
+
+https://www.youtube.com/watch?v=fo6iL6anvJ8
+
+### Canva slides
+
+
+https://www.canva.com/design/DAGfmUtZfvU/3achEYVyAOVqwqt2pKuR3A/edit?utm_content=DAGfmUtZfvU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+
+
+
+
 This is a monorepo setup for the Consenus Hackathon 2025, containing:
 
 1. **Frontend** - A Next.js 14 application using TypeScript
@@ -152,6 +165,10 @@ app/: Contains the main application pages and components.
 components/ui/: Contains reusable UI components.
 lib/: Contains utility functions.
 tailwind.config.ts: Tailwind CSS configuration file.
+
+Video Streaming
+- uses Deepgram for text to speech
+- Sadltalker model on Fal.ai for image to video
 
 # Agent-OS
 
