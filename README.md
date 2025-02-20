@@ -17,6 +17,14 @@ https://www.canva.com/design/DAGfmUtZfvU/3achEYVyAOVqwqt2pKuR3A/edit?utm_content
 https://consenus-hackathon2025-f3gmvk4un-konradmgnatgmailcoms-projects.vercel.app/
 
 
+### FastAPI Backend for PersonaOS custom Agent
+
+
+https://heroku-hackathon-agent-52a7eec1e3e5.herokuapp.com/docs
+
+
+
+
 This is a monorepo setup for the Consenus Hackathon 2025, containing:
 
 1. **Frontend** - A Next.js 14 application using TypeScript
