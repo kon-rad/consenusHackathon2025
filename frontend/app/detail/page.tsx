@@ -173,7 +173,6 @@ export default function Page() {
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span>0</span>
-                  <span>VIRTUAL</span>
                 </div>
                 <div className="grid grid-cols-3 gap-2">
                   <Button
@@ -213,7 +212,7 @@ export default function Page() {
                   <span className="text-teal-500">95.83%</span>
                 </h4>
                 <p className="text-sm text-gray-400">
-                  An additional 19,936.27 VIRTUAL is needed before the price
+                  An additional 19,936.27 PersonaGen is needed before the price
                   increases. Progress increases as the price rises.
                 </p>
               </div>

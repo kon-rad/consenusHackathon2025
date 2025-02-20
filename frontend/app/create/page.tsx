@@ -266,7 +266,7 @@ export default function CreateAgent() {
 
           <p className="text-xs text-white/50">
             Disclaimer: Avoid using third-party token lockers during the bonding
-            stage, as it may lead to token loss. Instead, send tokens to virtual
+            stage, as it may lead to token loss. Instead, send tokens to 
             wallet #x86k6k639PFB5G2f89x65DA5F1D9aFaB52A2E32 for a secure,
             immediate 6-month lock.
           </p>
