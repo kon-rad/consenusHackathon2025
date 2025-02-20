@@ -7,6 +7,8 @@ import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avatar } from "@/components/ui/avatar";
 import dynamic from "next/dynamic";
+import { ChatWindow } from "@/components/chat-window";
+import { Card } from "@/components/ui/card";
 
 // Dynamically import the chart to avoid SSR issues
 const Chart = dynamic(() => import("./chart"), { ssr: false });
@@ -146,11 +148,20 @@ export default function Page() {
                 </div>
               </div>
             </TabsContent>
+
+            <TabsContent value="terminal" className="space-y-6">
+              <ChatWindow />
+            </TabsContent>
           </Tabs>
         </main>
 
         {/* Sidebar */}
         <aside className="space-y-6">
+          {/* Chat Window */}
+          <div className="bg-gray-900/30 rounded-lg">
+            <ChatWindow />
+          </div>
+
           {/* Swap Card */}
           <div className="bg-black rounded-lg p-4">
             <h3 className="text-xl font-bold mb-4">Swap</h3>
