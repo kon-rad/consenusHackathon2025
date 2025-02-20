@@ -1,0 +1,11 @@
+### Merkle test
+
+GET {{apiUrl}}/api/merkle/test
+
+### Merkle buy
+
+POST {{apiUrl}}/api/merkle/buy
+
+### Merkle sell
+
+POST {{apiUrl}}/api/merkle/sell

@@ -1,13 +1,12 @@
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { AgentService } from '../Service/AgentService';
-import { CreateAgentDto } from "@/Agent/Service/Dto/CreateAgentDto";
-import { AgentDto } from "@/Agent/Service/Dto/AgentDto";
-import { ApiCreatedResponse } from "@nestjs/swagger";
+import { CreateAgentDto } from '@/Agent/Service/Dto/CreateAgentDto';
+import { AgentDto } from '@/Agent/Service/Dto/AgentDto';
+import { ApiCreatedResponse } from '@nestjs/swagger';
 
 @Controller()
 export class AgentController {
-  constructor(private readonly agentService: AgentService) {
-  }
+  constructor(private readonly agentService: AgentService) {}
 
   @ApiCreatedResponse({ type: AgentDto, isArray: true })
   @Get('/api/agents')

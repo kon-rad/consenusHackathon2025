@@ -1,6 +1,6 @@
-import { Column, Entity, PrimaryColumn } from "typeorm";
-import { CreateAgentDto } from "@/Agent/Service/Dto/CreateAgentDto";
-import { IdGenerator } from "@/Shared/IdGenerator";
+import { Column, Entity, PrimaryColumn } from 'typeorm';
+import { CreateAgentDto } from '@/Agent/Service/Dto/CreateAgentDto';
+import { IdGenerator } from '@/Shared/IdGenerator';
 
 @Entity()
 export class Agent {
@@ -32,11 +32,6 @@ export class Agent {
   }
 
   public static fromDto(dto: CreateAgentDto) {
-    return new Agent(
-      dto.name,
-      dto.bio,
-      dto.imageUrl,
-      dto.metadata
-    )
+    return new Agent(dto.name, dto.bio, dto.imageUrl, dto.metadata);
   }
 }
