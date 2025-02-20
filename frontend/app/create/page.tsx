@@ -25,8 +25,7 @@ export default function CreateAgent() {
         <div className="flex items-center justify-between px-4 py-3">
           <div className="flex items-center space-x-6">
             {/* <span className="text-white font-semibold">Logo</span> */}
-            <div className="space-x-4 text-sm text-white/80">
-            </div>
+            <div className="space-x-4 text-sm text-white/80"></div>
           </div>
           <div className="flex items-center space-x-4">
             <div className="relative">
@@ -37,12 +36,15 @@ export default function CreateAgent() {
                 className="w-64 bg-white/5 border-white/10 pl-10 text-white placeholder:text-white/50"
               />
             </div>
-            <Button
+            {/* <Button
               variant="outline"
               className="bg-white/5 border-white/10 text-white"
+              onClick={() => {
+                window.location.href = `/create`;
+              }}
             >
               Create New Agent
-            </Button>
+            </Button> */}
           </div>
         </div>
       </nav>

@@ -35,6 +35,9 @@ export default function Page() {
             <Button
               variant="outline"
               className="bg-white/5 border-white/10 text-white"
+              onClick={() => {
+                window.location.href = `/create`;
+              }}
             >
               Create New Agent
             </Button>

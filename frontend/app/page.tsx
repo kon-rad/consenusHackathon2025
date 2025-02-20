@@ -1,9 +1,12 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 import Image from "next/image";
 
 export default function Page() {
+
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Top Navigation */}
@@ -53,6 +56,9 @@ export default function Page() {
             <Button
               variant="outline"
               className="bg-white/5 border-white/10 text-white"
+              onClick={() => {
+                window.location.href = `/create`;
+              }}
             >
               Create New Agent
             </Button>
@@ -89,6 +95,9 @@ export default function Page() {
             <div
               key={agent.id}
               className="grid grid-cols-[auto_1fr_1fr_1fr_auto] items-center gap-4 rounded-lg p-4 hover:bg-gray-800/50"
+              onClick={() => {
+                window.location.href = `/detail`;
+              }}
             >
               <div className="flex items-center space-x-4">
                 <div className="relative h-12 w-12">
